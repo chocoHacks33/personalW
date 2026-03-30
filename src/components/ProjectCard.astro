@@ -4,7 +4,6 @@ import Link from '@/components/Link.astro'
 import { Separator } from '@/components/ui/separator'
 import { extractDomain, formatMonthYear } from '@/lib/utils'
 import { Icon } from 'astro-icon/components'
-import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
 
 interface Props {
@@ -12,10 +11,39 @@ interface Props {
 }
 
 const { project } = Astro.props
+const getEmbedUrl = (url?: string) => {
+  if (!url) return null
+  try {
+    const parsed = new URL(url)
+    if (
+      parsed.hostname.includes('youtube.com') ||
+      parsed.hostname.includes('youtu.be')
+    ) {
+      const videoId =
+        parsed.searchParams.get('v') ||
+        (parsed.hostname.includes('youtu.be')
+          ? parsed.pathname.replace('/', '')
+          : null)
+
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&rel=0`
+      }
+    }
+  } catch {
+    return null
+  }
+
+  return null
+}
+
+const demoEmbedUrl = getEmbedUrl(project.data.demoVideo)
+const projectCardId = `project-card-${project.id.replace(/[^a-zA-Z0-9-_]/g, '-')}`
 ---
 
 <div
-  class="hover:bg-muted/50 border p-4 transition-colors duration-300 ease-in-out"
+  id={projectCardId}
+  class="project-card group/project hover:bg-muted/50 relative border p-4 transition-colors duration-300 ease-in-out"
+  data-demo-src={demoEmbedUrl ?? undefined}
 >
   <Link
     href={project.data.link}
@@ -24,13 +52,12 @@ const { project } = Astro.props
   >
     {
       project.data.image && (
-        <div class="max-w-3xs sm:shrink-0">
-          <Image
+        <div class="w-full overflow-hidden border sm:w-64 sm:shrink-0">
+          <img
             src={project.data.image}
             alt={project.data.name}
-            width={1200}
-            height={630}
-            class="object-cover"
+            loading="lazy"
+            class="aspect-[16/10] h-full w-full object-cover object-center"
           />
         </div>
       )
@@ -73,4 +100,56 @@ const { project } = Astro.props
       }
     </div>
   </Link>
+  {
+    demoEmbedUrl && (
+      <div class="pointer-events-none absolute top-1/2 right-4 z-30 hidden w-[min(22rem,42vw)] -translate-y-1/2 translate-x-3 opacity-0 transition-all duration-300 lg:block group-hover/project:translate-x-0 group-hover/project:opacity-100 group-focus-within/project:translate-x-0 group-focus-within/project:opacity-100">
+        <div class="border bg-background p-2 shadow-[0_18px_50px_rgba(0,0,0,0.35)]">
+          <div class="mb-2 flex items-center justify-between gap-3 px-1">
+            <span class="text-muted-foreground text-[10px] uppercase tracking-[0.22em]">
+              Demo Preview
+            </span>
+            <Icon name="lucide:play" class="text-primary size-3.5" />
+          </div>
+          <div class="aspect-video overflow-hidden border bg-black">
+            <iframe
+              data-src={demoEmbedUrl}
+              title={`${project.data.name} demo video`}
+              data-demo-iframe
+              class="size-full"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    )
+  }
 </div>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const cards = document.querySelectorAll<HTMLElement>('.project-card[data-demo-src]')
+
+    for (const card of cards) {
+      const iframe = card.querySelector<HTMLIFrameElement>('[data-demo-iframe]')
+      const src = card.dataset.demoSrc
+
+      if (!iframe || !src) continue
+
+      const startPreview = () => {
+        if (iframe.src !== src) iframe.src = src
+      }
+
+      const stopPreview = () => {
+        if (iframe.src) iframe.removeAttribute('src')
+      }
+
+      card.addEventListener('mouseenter', startPreview)
+      card.addEventListener('mouseleave', stopPreview)
+      card.addEventListener('focusin', startPreview)
+      card.addEventListener('focusout', stopPreview)
+    }
+  })
+</script>

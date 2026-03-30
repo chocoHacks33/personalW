@@ -35,13 +35,14 @@ const authors = defineCollection({
 
 const projects = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
-  schema: ({ image }) =>
+  schema: () =>
     z.object({
       name: z.string(),
       description: z.string(),
       tags: z.array(z.string()),
-      image: image(),
+      image: z.string().startsWith('/'),
       link: z.string().url(),
+      demoVideo: z.string().url().optional(),
       startDate: z.coerce.date().optional(),
       endDate: z.coerce.date().optional(),
       order: z.number().optional(),

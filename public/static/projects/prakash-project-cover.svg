@@ -1,0 +1,11 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#171411"/>
+  <rect x="28" y="28" width="1144" height="574" stroke="#3A332B"/>
+  <path d="M-50 520C77 445 160 413 248 336C337 260 425 154 558 142C691 130 773 211 864 204C954 197 1000 114 1092 84C1184 54 1286 76 1362 126" stroke="#D9C5A7" stroke-opacity="0.75" stroke-width="2"/>
+  <path d="M-20 558C107 483 190 451 278 374C367 298 455 192 588 180C721 168 803 249 894 242C984 235 1030 152 1122 122C1214 92 1316 114 1392 164" stroke="#D9C5A7" stroke-opacity="0.45" stroke-width="2"/>
+  <path d="M55 138C108 111 168 117 205 156C242 195 250 255 216 290C182 326 114 332 68 295C22 258 12 185 55 138Z" stroke="#D9C5A7" stroke-opacity="0.75" stroke-width="2"/>
+  <path d="M864 380C914 347 977 349 1021 385C1065 422 1080 485 1045 532C1011 579 942 609 875 594C809 579 760 520 758 455C756 389 814 414 864 380Z" stroke="#D9C5A7" stroke-opacity="0.75" stroke-width="2"/>
+  <text x="72" y="118" fill="#B29E84" font-family="JetBrains Mono, monospace" font-size="20" letter-spacing="5">PRAKASH PROJECTS</text>
+  <text x="72" y="540" fill="#F1E3CC" font-family="JetBrains Mono, monospace" font-size="54" font-weight="700">Selected builds</text>
+  <text x="72" y="580" fill="#B29E84" font-family="JetBrains Mono, monospace" font-size="22">Hackathons, prototypes, demos, and experiments</text>
+</svg>

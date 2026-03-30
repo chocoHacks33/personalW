@@ -1,8 +1,5 @@
 ---
-import DiscordPresence from '@/components/bento/DiscordPresence.tsx'
-import GithubCalendar from '@/components/bento/GithubCalendar.tsx'
-import SpotifyPresence from '@/components/bento/SpotifyPresence.tsx'
-import WakatimeGraph from '@/components/bento/WakatimeGraph.tsx'
+import TechStackCard from '@/components/bento/TechStackCard.tsx'
 import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
 import { SOCIAL_LINKS } from '@/consts'
@@ -12,6 +9,18 @@ import { cn } from '@/lib/utils'
 import { Icon } from 'astro-icon/components'
 
 const latestPost = await getAllPosts().then((posts) => posts.at(0))
+const photoSlides = [
+  '/static/bento/photos/6199387384990863519.jpg',
+  '/static/bento/photos/6199387384990863963.jpg',
+  '/static/bento/photos/6199387384990863964.jpg',
+  '/static/bento/photos/6199387384990863965.jpg',
+  '/static/bento/photos/6199387384990863966.jpg',
+  '/static/bento/photos/6199387384990863967.jpg',
+  '/static/bento/photos/6199387384990863968.jpg',
+  '/static/bento/photos/6199387384990863969.jpg',
+  '/static/bento/photos/6199387384990863970.jpg',
+  '/static/bento/photos/6199387384990863971.jpg',
+]
 ---
 
 <Layout class="px-2">
@@ -19,10 +28,10 @@ const latestPost = await getAllPosts().then((posts) => posts.at(0))
   <section
     class={cn(
       'mx-auto grid min-w-xs sm:has-[[data-trigger]:hover]:*:first:[&_[data-overlay]]:opacity-0',
-      'max-w-sm grid-cols-1 [grid-template-areas:"a""b""e""d""g""f""j""i""k"]',
-      'sm:max-w-2xl sm:grid-cols-2 sm:[grid-template-areas:"a_a""b_d""e_e""j_g""h_i""h_c""k_c""f_f"]',
-      'lg:max-w-5xl lg:grid-cols-3 lg:[grid-template-areas:"a_a_b""d_e_e""h_f_f""h_i_g""k_c_j"]',
-      'xl:max-w-7xl xl:grid-cols-4 xl:[grid-template-areas:"a_a_b_c""d_e_e_c""h_f_f_g""h_i_j_k"]',
+      'max-w-sm grid-cols-1 [grid-template-areas:"a""b""e""d""j""i""k""l"]',
+      'sm:max-w-2xl sm:grid-cols-2 sm:[grid-template-areas:"a_a""b_d""e_e""j_i""h_c""h_l""k_l"]',
+      'lg:max-w-5xl lg:grid-cols-3 lg:[grid-template-areas:"a_a_b""d_e_e""h_j_i""h_c_k""h_l_l"]',
+      'xl:max-w-7xl xl:grid-cols-4 xl:[grid-template-areas:"a_a_b_c""d_e_e_c""h_j_i_k""h_l_l_l"]',
     )}
   >
     <div class="aspect-[3/4] p-2 [grid-area:a] sm:aspect-[2/1] xl:aspect-[2/1]">
@@ -40,27 +49,12 @@ const latestPost = await getAllPosts().then((posts) => posts.at(0))
                 <p
                   class="text-foreground/80 bg-background block border p-3 text-sm text-pretty"
                 >
-                  Hey, I&rsquo;m Jason! I&rsquo;m a product engineer, designer, and security researcher based in Los Angeles, California.
+                  Hey, I&rsquo;m Prakash! I&rsquo;m a Computer Science student at NUS, builder, and product engineer based in Singapore. I like building fast, stress-testing ideas in the real world, and shipping systems that actually get used.
                 </p>
                 <p
                   class="text-foreground/80 bg-background block border p-3 text-sm text-pretty"
                 >
-                   I organize and author for <Link
-                    href="https://en.wikipedia.org/wiki/Capture_the_flag_(cybersecurity)"
-                    external
-                    class="text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors"
-                    >security CTF</Link
-                  > competitions with <Link
-                    href="https://sekai.team"
-                    external
-                    class="text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors"
-                    >Project Sekai CTF</Link
-                  > and the <Link
-                    href="https://ctf.mt"
-                    external
-                    class="text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors"
-                    >Friendly Maltese Citizens</Link
-                  >. You can read more about me <Link
+                  I co-founded The Collective, a venture builder and a community connecting ambitious builders across universities. I work closely with early-stage founders and through it shape my own ventures, including adMorph.ai. You can read more about me <Link
                     href="/about"
                     class="text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors"
                     >here</Link
@@ -80,12 +74,27 @@ const latestPost = await getAllPosts().then((posts) => posts.at(0))
           <div
             class="relative size-full bg-[url('/static/bento/details-foreground.png')] bg-cover bg-center bg-no-repeat transition-opacity duration-200 sm:opacity-0 sm:hover:opacity-100"
           >
-            <p
-              class="text-foreground/80 bg-background absolute top-1/2 left-0 mr-24 ml-4 -translate-y-1/2 border p-3 text-xs text-pretty"
-            >
-              This blog contains educational resources pertaining to CTFs and
-              cybersecurity. I hope you enjoy reading!
-            </p>
+            <div class="absolute inset-0 flex flex-col justify-center gap-3 px-4 py-5">
+              <p
+                class="text-foreground/80 bg-background mr-14 border p-3 text-xs text-pretty"
+              >
+                Click <Link
+                  href="/work"
+                  class="text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors"
+                  >here</Link
+                > for my work experience and to learn more about my ventures!
+              </p>
+              <p
+                class="text-foreground/80 bg-background mr-24 border p-3 text-xs text-pretty"
+              >
+                Click <Link
+                  href="/projects"
+                  class="text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors"
+                  >here</Link
+                > to find out more about the projects I have done across
+                hackathons!
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -102,7 +111,27 @@ const latestPost = await getAllPosts().then((posts) => posts.at(0))
     </div>
     <div class="aspect-auto p-2 [grid-area:d] sm:aspect-square">
       <div class="bg-muted size-full border">
-        <DiscordPresence client:load />
+        <div
+          data-photo-carousel
+          data-slides={JSON.stringify(photoSlides)}
+          class="group/photo relative size-full overflow-hidden"
+        >
+          <div
+            data-photo-frame
+            class="size-full bg-cover bg-center bg-no-repeat grayscale sepia-[0.65] contrast-[0.95] brightness-[0.78] saturate-[0.7] transition-[background-image,transform,filter] duration-300"
+            style={`background-image: url('${photoSlides[0] ?? '/static/bento/avatar.jpg'}')`}
+          ></div>
+          <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/25 to-transparent"></div>
+          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background/45 to-transparent"></div>
+          <button
+            type="button"
+            data-photo-next
+            class="bg-border/50 text-primary ring-ring absolute right-3 bottom-3 flex size-12 items-center justify-center rounded-full transition-[box-shadow,transform,background-color] duration-300 hover:-translate-y-0.5 hover:ring-2 focus-visible:ring-2"
+            aria-label="Show next photo"
+          >
+            <Icon name="lucide:move-right" size={18} />
+          </button>
+        </div>
       </div>
     </div>
     <div class="aspect-[6/5] p-2 [grid-area:e] sm:aspect-[2/1]">
@@ -151,41 +180,6 @@ const latestPost = await getAllPosts().then((posts) => posts.at(0))
         </div>
       </div>
     </div>
-    <div class="aspect-square p-2 [grid-area:f] sm:aspect-[2/1]">
-      <div data-trigger class="bg-muted relative size-full border">
-        <div
-          class="absolute size-full bg-[url('/static/bento/calendar-background.png')] bg-cover bg-left bg-no-repeat"
-        >
-          <div
-            class="absolute size-full bg-[url('/static/bento/calendar-foreground.png')] bg-cover bg-left bg-no-repeat transition-opacity duration-200 sm:opacity-0 sm:hover:opacity-100"
-          >
-            <p
-              class="text-foreground/80 bg-background absolute top-[37.5%] left-4 -translate-y-1/2 border p-2 text-xs text-pretty"
-            >
-              Check out my<br /> GitHub calendar!
-            </p>
-          </div>
-        </div>
-        <div class="flex size-full items-center justify-center p-8">
-          <GithubCalendar username="jktrn" client:load />
-        </div>
-      </div>
-    </div>
-    <div class="aspect-square p-2 [grid-area:g]">
-      <div data-trigger class="bg-muted size-full border">
-        <div
-          class="group/spotify relative size-full bg-[url('/static/bento/spotify-background.png')] bg-cover bg-center bg-no-repeat"
-        >
-          <div
-            class="absolute size-full bg-[url('/static/bento/spotify-foreground.png')] bg-cover bg-center bg-no-repeat transition-opacity duration-200 sm:opacity-0 sm:group-hover/spotify:opacity-100"
-          >
-          </div>
-          <div class="flex size-full items-center justify-center">
-            <SpotifyPresence client:load />
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="hidden p-2 [grid-area:h] sm:block sm:aspect-[1/2]">
       <div class="bg-muted size-full border">
         <div
@@ -228,45 +222,97 @@ const latestPost = await getAllPosts().then((posts) => posts.at(0))
     </div>
     <div class="aspect-square p-2 [grid-area:j]">
       <div class="bg-muted size-full border">
-        <WakatimeGraph client:load />
+        <TechStackCard />
       </div>
     </div>
     <div class="aspect-square p-2 [grid-area:k]">
       <div data-trigger class="bg-muted size-full border">
         <div
-          class="group/twitter relative flex size-full items-center justify-center bg-[url('/static/bento/twitter-background.png')] bg-cover bg-center bg-no-repeat"
+          class="group/linkedin relative flex size-full items-center justify-center bg-[url('/static/bento/twitter-background.png')] bg-cover bg-center bg-no-repeat"
         >
           <div
-            class="size-full bg-[url('/static/bento/twitter-foreground.png')] bg-cover bg-center bg-no-repeat transition-opacity duration-200 sm:opacity-0 sm:group-hover/twitter:opacity-100"
+            class="size-full bg-[url('/static/bento/twitter-foreground.png')] bg-cover bg-center bg-no-repeat transition-opacity duration-200 sm:opacity-0 sm:group-hover/linkedin:opacity-100"
             aria-hidden="true"
           >
             <p
               class="text-foreground/80 bg-background absolute bottom-4 left-4 hidden border p-2 text-xs text-pretty sm:block"
             >
-              TypeScript is<br />much better!
+              Connect with me<br />on LinkedIn!
             </p>
           </div>
           <Icon
-            name="mdi:twitter"
+            name="mdi:linkedin"
             class="text-primary absolute size-1/2 sm:size-24"
             aria-hidden="true"
           />
           <Link
-            href={SOCIAL_LINKS.find((link) => link.label === 'Twitter')?.href ||
+            href={SOCIAL_LINKS.find((link) => link.label === 'LinkedIn')?.href ||
               '#'}
-            title="Visit my Twitter profile"
-            aria-label="Visit my Twitter profile"
+            title="Visit my LinkedIn profile"
+            aria-label="Visit my LinkedIn profile"
             external
-            class="bg-border/50 text-primary ring-ring group/twitter-link absolute end-0 bottom-0 m-3 rounded-full p-3 transition-[box-shadow] duration-300 hover:ring-2 focus-visible:ring-2"
+            class="bg-border/50 text-primary ring-ring group/linkedin-link absolute end-0 bottom-0 m-3 rounded-full p-3 transition-[box-shadow] duration-300 hover:ring-2 focus-visible:ring-2"
           >
             <Icon
               name="lucide:move-up-right"
-              class="transition-transform duration-300 group-hover/twitter-link:rotate-12"
+              class="transition-transform duration-300 group-hover/linkedin-link:rotate-12"
               size={16}
             />
           </Link>
         </div>
       </div>
     </div>
+    <div class="p-2 [grid-area:l]">
+      <div class="border bg-muted/20 relative overflow-hidden">
+        <div class="group/resume relative flex aspect-[4/1] min-h-36 w-full items-center justify-between gap-6 overflow-hidden px-6 py-5">
+          <div
+            class="absolute inset-0 bg-[url('/static/bento/image-2.png')] bg-cover bg-center bg-no-repeat opacity-20"
+            aria-hidden="true"
+          ></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-background via-background/94 to-background/80"></div>
+
+          <div class="relative z-10 max-w-xl">
+            <p class="text-muted-foreground text-[11px] uppercase tracking-[0.28em]">
+              Resume
+            </p>
+            <h3 class="mt-2 text-xl font-medium">Download my resume</h3>
+            <p class="text-foreground/72 mt-3 text-sm leading-7">
+              A concise view of my internships, startups, technical work, and
+              experience across product and engineering.
+            </p>
+          </div>
+
+          <div class="relative z-10 shrink-0">
+            <a
+              href="/static/resume/Prakash.pdf"
+              download="Prakash Resume.pdf"
+              class="bg-border/50 text-primary ring-ring inline-flex items-center gap-2 rounded-full border px-4 py-3 text-sm transition-[box-shadow,transform,background-color] duration-300 hover:-translate-y-0.5 hover:ring-2 focus-visible:ring-2"
+            >
+              <Icon name="lucide:download" size={16} />
+              <span>Download PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+  <script is:inline>
+    document.querySelectorAll('[data-photo-carousel]').forEach((carousel) => {
+      const frame = carousel.querySelector('[data-photo-frame]')
+      const nextButton = carousel.querySelector('[data-photo-next]')
+      const slides = JSON.parse(carousel.dataset.slides || '[]')
+      let index = 0
+
+      if (!frame || !nextButton || slides.length === 0) return
+
+      const render = () => {
+        frame.style.backgroundImage = `url('${slides[index]}')`
+      }
+
+      nextButton.addEventListener('click', () => {
+        index = (index + 1) % slides.length
+        render()
+      })
+    })
+  </script>
 </Layout>
