@@ -1,8 +1,8 @@
 ---
 name: 'TC Website'
-description: "The Collective's landing page."
-tags: ['website', 'landing-page', 'startup']
+description: "The Collective's landing experience for connecting student founders with mentors, partners, events, and opportunities across universities."
+tags: ['product', 'community', 'startup']
 image: '/static/projects/thecollective.png'
 link: 'https://thecollectivefounders.com/'
-order: 11
+order: 14
 ---

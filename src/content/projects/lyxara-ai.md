@@ -1,9 +1,9 @@
 ---
 name: 'Lyxara.ai'
-description: 'An AI conversational agent with long term memory of patient worries from a day to day basis, providing advice.'
-tags: ['ai', 'healthcare', 'memory']
+description: 'A medical voice agent that combines Ayurvedic, traditional, and modern medicine references with a long-term memory graph to offer personalized preventive-care guidance.'
+tags: ['voice-ai', 'healthcare', 'knowledge-graph']
 image: '/static/projects/lyxara.png'
 link: 'https://www.youtube.com/watch?v=gMozWBD9LTM'
 demoVideo: 'https://www.youtube.com/watch?v=gMozWBD9LTM'
-order: 7
+order: 11
 ---

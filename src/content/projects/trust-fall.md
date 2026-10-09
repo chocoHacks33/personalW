@@ -4,5 +4,5 @@ description: 'Trust Fall is an AI-powered system that detects when elderly indiv
 tags: ['ai', 'computer-vision', 'healthcare']
 image: '/static/projects/trustfall.png'
 link: 'https://devpost.com/software/aceofspades'
-order: 4
+order: 18
 ---

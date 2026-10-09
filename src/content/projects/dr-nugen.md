@@ -1,9 +1,9 @@
 ---
 name: 'Dr Nugen'
-description: 'Dr Nugen, is a overlay over your smart phone to verify health claims in youtube shorts. It was developed using Nugen AI.'
+description: 'A background healthcare agent that analyzes and fact-checks health claims while users watch short-form videos, surfacing context without interrupting the viewing experience.'
 tags: ['healthcare', 'mobile', 'ai']
 image: '/static/projects/drnugen.png'
-link: 'https://www.youtube.com/watch?v=Kkn1d6rDabU&t=11s'
+link: 'https://github.com/dioptrique/DRnugen'
 demoVideo: 'https://www.youtube.com/watch?v=Kkn1d6rDabU&t=11s'
 order: 10
 ---

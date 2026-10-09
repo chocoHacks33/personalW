@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Cairn AI project cover</title>
+  <desc id="desc">A browser workflow becoming a durable typed API through record, compile, verify, invoke, and repair stages.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07110f"/>
+      <stop offset="0.55" stop-color="#10221d"/>
+      <stop offset="1" stop-color="#172b24"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#77f2b1"/>
+      <stop offset="1" stop-color="#d5ff91"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#b9ffd8" stroke-opacity="0.055"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#grid)"/>
+  <circle cx="1040" cy="96" r="220" fill="#6bf0a3" opacity="0.06"/>
+  <circle cx="176" cy="660" r="260" fill="#baff8f" opacity="0.04"/>
+
+  <g transform="translate(88 82)">
+    <rect width="1024" height="586" rx="30" fill="#08130f" fill-opacity="0.72" stroke="#9df8bd" stroke-opacity="0.17"/>
+    <rect x="1" y="1" width="1022" height="70" rx="29" fill="#d5ff91" fill-opacity="0.045"/>
+    <circle cx="35" cy="35" r="6" fill="#77f2b1"/>
+    <circle cx="57" cy="35" r="6" fill="#77f2b1" opacity="0.45"/>
+    <circle cx="79" cy="35" r="6" fill="#77f2b1" opacity="0.2"/>
+    <text x="116" y="43" fill="#c7d9cf" font-family="Arial, sans-serif" font-size="19">workflow.cairn.ai / compile</text>
+
+    <g transform="translate(54 115)">
+      <text x="0" y="62" fill="#f0fff6" font-family="Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="5">CAIRN AI</text>
+      <text x="2" y="104" fill="#9db5a8" font-family="Arial, sans-serif" font-size="24">Turn browser workflows into durable, typed APIs.</text>
+
+      <g transform="translate(0 168)">
+        <rect width="914" height="176" rx="22" fill="#10251d" stroke="#77f2b1" stroke-opacity="0.2"/>
+        <g transform="translate(34 39)">
+          <rect width="144" height="96" rx="15" fill="#152f25" stroke="#77f2b1" stroke-opacity="0.42"/>
+          <rect x="20" y="21" width="104" height="54" rx="8" fill="none" stroke="#d5ff91" stroke-opacity="0.8"/>
+          <circle cx="34" cy="34" r="3" fill="#d5ff91"/>
+          <path d="M25 48h94M46 26v44" stroke="#d5ff91" stroke-opacity="0.35"/>
+          <text x="72" y="119" text-anchor="middle" fill="#8da89a" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">BROWSER</text>
+        </g>
+
+        <path d="M202 87H706" stroke="#77f2b1" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="8 10"/>
+        <path d="m696 77 12 10-12 10" fill="none" stroke="#77f2b1" stroke-width="2"/>
+
+        <g font-family="Arial, sans-serif" font-size="13" letter-spacing="1.5" text-anchor="middle">
+          <g transform="translate(270 87)"><circle r="28" fill="#77f2b1" fill-opacity="0.1" stroke="#77f2b1" stroke-opacity="0.5"/><text y="5" fill="#d7ffe9">REC</text></g>
+          <g transform="translate(380 87)"><circle r="28" fill="#77f2b1" fill-opacity="0.1" stroke="#77f2b1" stroke-opacity="0.5"/><text y="5" fill="#d7ffe9">BUILD</text></g>
+          <g transform="translate(490 87)"><circle r="28" fill="#77f2b1" fill-opacity="0.1" stroke="#77f2b1" stroke-opacity="0.5"/><text y="5" fill="#d7ffe9">TEST</text></g>
+          <g transform="translate(600 87)"><circle r="28" fill="#77f2b1" fill-opacity="0.1" stroke="#77f2b1" stroke-opacity="0.5"/><text y="5" fill="#d7ffe9">FIX</text></g>
+        </g>
+
+        <g transform="translate(736 39)">
+          <rect width="144" height="96" rx="15" fill="#77f2b1" fill-opacity="0.09" stroke="#d5ff91" stroke-opacity="0.65"/>
+          <path d="M40 30h64M40 48h49M40 66h58" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+          <text x="72" y="119" text-anchor="middle" fill="#b9d5c7" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">ENDPOINT</text>
+        </g>
+      </g>
+
+      <g transform="translate(0 390)" font-family="Arial, sans-serif">
+        <rect width="178" height="52" rx="26" fill="#77f2b1" fill-opacity="0.1" stroke="#77f2b1" stroke-opacity="0.34"/>
+        <text x="89" y="33" text-anchor="middle" fill="#d7ffe9" font-size="16">OpenAPI</text>
+        <rect x="194" width="178" height="52" rx="26" fill="#77f2b1" fill-opacity="0.1" stroke="#77f2b1" stroke-opacity="0.34"/>
+        <text x="283" y="33" text-anchor="middle" fill="#d7ffe9" font-size="16">MCP</text>
+        <rect x="388" width="178" height="52" rx="26" fill="#77f2b1" fill-opacity="0.1" stroke="#77f2b1" stroke-opacity="0.34"/>
+        <text x="477" y="33" text-anchor="middle" fill="#d7ffe9" font-size="16">SDK + CLI</text>
+        <rect x="582" width="332" height="52" rx="26" fill="url(#accent)" filter="url(#glow)"/>
+        <text x="748" y="33" text-anchor="middle" fill="#0a1712" font-size="16" font-weight="700">SELF-HEALING AUTOMATION</text>
+      </g>
+    </g>
+  </g>
+</svg>

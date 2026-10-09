@@ -5,5 +5,5 @@ tags: ['spatial-computing', '3d', 'ai']
 image: '/static/projects/gaussiana.png'
 link: 'https://devpost.com/software/gaussiana-the-future-of-spatial-compute'
 demoVideo: 'https://www.youtube.com/watch?v=3f2w26lr2IU'
-order: 6
+order: 19
 ---

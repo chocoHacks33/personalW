@@ -5,5 +5,5 @@ tags: ['marketplace', 'web3', 'hackathon']
 image: '/static/projects/satstreet.png'
 link: 'https://devpost.com/software/satstreet'
 demoVideo: 'https://www.youtube.com/watch?v=mI3XLM5cqYo'
-order: 3
+order: 17
 ---

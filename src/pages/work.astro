@@ -6,54 +6,110 @@ import { Icon } from 'astro-icon/components'
 
 const entries = [
   {
-    type: 'Startup',
+    id: 'ifixai',
+    type: 'Internship',
     period: '2026',
-    dateRange: 'October 2025 - Present',
+    dateRange: 'June 2026 - Present',
+    title: 'AI Software Engineer Intern',
+    organization: 'iFixAI',
+    location: 'London',
+    summary:
+      'Building evaluation and governance infrastructure for tool-using AI agents, with an emphasis on independent scoring, enforceable safeguards, and measurable remediation.',
+    highlights: [
+      'Built a Python evaluation pipeline with 13 governance checks, two independent LLM evaluators, and web-based scorecards.',
+      'Implemented six safeguards: role-based access control, policy enforcement, audit logging, rate limiting, schema validation, and resilient API handling.',
+      'Turned failed evaluations into stronger fixtures and policies through a remediation loop, improving governance scores by 35% on average.',
+    ],
+    monogram: 'IF',
+  },
+  {
+    id: 'elevenlabs',
+    type: 'Community',
+    period: '2026',
+    dateRange: '2026 - Present',
+    title: 'Community Builder',
+    organization: 'ElevenLabs',
+    location: 'Singapore',
+    summary:
+      'Supporting the Singapore builder community around voice and conversational AI by connecting developers, sharing practical work, and helping ideas move from experiments to useful products.',
+    highlights: [],
+    monogram: '11',
+  },
+  {
+    id: 'gmi-cloud',
+    type: 'Developer Program',
+    period: '2026',
+    dateRange: '2026 - Present',
+    title: 'Clouder (Developer)',
+    organization: 'GMI Cloud',
+    location: 'Singapore',
+    summary:
+      'Selected as a Clouder to build with GMI Cloud’s AI-native GPU infrastructure and contribute to technical community initiatives.',
+    highlights: [
+      'Extending adMorph.ai with GMI Cloud infrastructure.',
+      'Contributing to an AI symposium for builders in Singapore.',
+    ],
+    monogram: 'GMI',
+  },
+  {
+    id: 'the-collective',
+    type: 'Startup',
+    period: '2025',
+    dateRange: 'September 2025 - Present',
     title: 'Co-Founder',
     organization: 'The Collective',
     location: 'Singapore',
     summary:
-      'Co-Founded The Collective, a Venture Studio that accelerates student startup founders growth and brings corporate deals to them. Checkout our website here: https://www.thecollectivefounders.com/',
-    highlights: [],
+      'Co-founded a venture studio that helps student founders grow their startups, build peer networks, and access corporate opportunities.',
+    highlights: [
+      'Built a community spanning 70 startups and 150 student founders.',
+      'Raised more than USD $20,000 across seven founder-focused events.',
+      'Led a 20-person team and served as product owner across three development sprints.',
+    ],
     monogram: 'TC',
     logo: '/static/logos/collective.png',
   },
   {
+    id: 'edgemaker-ai',
     type: 'Internship',
     period: '2025',
     dateRange: 'March 2025 - August 2025',
-    title: 'SW Engineer Intern',
+    title: 'AI Software Engineer Intern',
     organization: 'Edgemaker.AI',
     location: 'Singapore',
     summary:
       'Built AI product and backend systems at Edgemaker.AI, spanning analytics, LLM workflows, and ecosystem-facing startup initiatives.',
     highlights: [
       "Built an AI analytics dashboard using React.js, Express.js and Python which analyzes Instagram influencers' data with 86% accuracy to score their trustworthiness and commenter activity.",
-      'Built a Retrieval Augmented Generation (RAG) based chatbot for chat group moderators to query chat histories.',
-      'Secured sponsorship of USD $6000 from 3 partners and organized NeuroSpark, a 250-participant entrepreneurship event, featuring EdgeMaker solutions.',
+      'Built and deployed a Retrieval-Augmented Generation chatbot at four client sites so moderators could query group-chat histories.',
+      'Shipped a floating React support widget across three websites.',
+      'Secured USD $7,000 in sponsorship from three partners and organized NeuroSpark, a 250-participant entrepreneurship event featuring EdgeMaker solutions.',
     ],
     monogram: 'EA',
     logo: '/static/logos/edgemaker.png',
   },
   {
+    id: 'invigilo-ai',
     type: 'Internship',
     period: '2023',
     dateRange: 'January 2023 - April 2023',
     title: 'SW Engineer Intern',
-    organization: 'Invigilo Safety AI',
+    organization: 'Invigilo AI',
     location: 'Singapore',
     summary:
       'Built internal tooling, alerting, and data systems at Invigilo Safety AI to support production AI deployments and operational workflows.',
     highlights: [
       'Built Telegram bot that alerted DevOps team about uptime for 30 on-premise AI deployments, enhancing monitoring efficiency.',
+      'Built CVData, a Git-like computer-vision dataset platform used by a 15-person MLOps team for more than three years.',
       'Developed data collection pipelines to filter and collect camera footage from 6 sites in Singapore.',
-      'Developed a Python library for a rule-based engine, facilitating customizable business logic solutions in AI applications.',
-      'Represented Invigilo at a build tech conference, gathering 50 sales leads.',
+      'Developed a Python rules engine for customizable business logic across 10 AI deployments.',
+      'Represented Invigilo at a build-tech conference and generated more than 30 sales leads.',
     ],
     monogram: 'IS',
     logo: '/static/logos/invigilo.png',
   },
   {
+    id: 'science-centre',
     type: 'Internship',
     period: '2021',
     dateRange: 'December 2021 - January 2022',
@@ -84,15 +140,19 @@ const entries = [
   >
     <section class="mt-8">
       <div class="border-b pb-4">
-        <p class="text-muted-foreground text-[11px] uppercase tracking-[0.28em]">
+        <p
+          class="text-muted-foreground text-[11px] tracking-[0.28em] uppercase"
+        >
           Timeline
         </p>
-        <div class="mt-3 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+        <div
+          class="mt-3 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between"
+        >
           <div>
-            <h2 class="text-xl font-medium">Internships & startups</h2>
+            <h2 class="text-xl font-medium">Work, communities & ventures</h2>
             <p class="text-muted-foreground mt-2 max-w-3xl text-sm leading-7">
-              A cleaner chronological view of the teams, ventures, and environments
-              that shaped how I build.
+              A cleaner chronological view of the teams, ventures, and
+              environments that shaped how I build.
             </p>
           </div>
           <p class="text-muted-foreground text-xs">
@@ -105,7 +165,8 @@ const entries = [
         <div
           aria-hidden="true"
           class="bg-border absolute top-0 bottom-0 left-2 w-px sm:left-3"
-        ></div>
+        >
+        </div>
 
         <ol class="space-y-3">
           {
@@ -113,15 +174,18 @@ const entries = [
               <li class="group/timeline relative">
                 <div
                   aria-hidden="true"
-                  class="absolute top-8 left-0 z-10 flex size-4 items-center justify-center rounded-full border border-primary/30 bg-background shadow-[0_0_0_4px_rgba(26,24,20,1)] transition-all duration-300 sm:left-[0.2rem] sm:group-hover/timeline:border-primary sm:group-hover/timeline:bg-primary/12"
+                  class="border-primary/30 bg-background sm:group-hover/timeline:border-primary sm:group-hover/timeline:bg-primary/12 absolute top-8 left-0 z-10 flex size-4 items-center justify-center rounded-full border shadow-[0_0_0_4px_rgba(26,24,20,1)] transition-all duration-300 sm:left-[0.2rem]"
                 >
-                  <div class="bg-primary/70 size-1.5 rounded-full transition-colors duration-300 sm:group-hover/timeline:bg-primary"></div>
+                  <div class="bg-primary/70 sm:group-hover/timeline:bg-primary size-1.5 rounded-full transition-colors duration-300" />
                 </div>
 
-                <article class="ml-6 border bg-background transition-all duration-300 sm:ml-10 sm:hover:border-primary/30 sm:hover:bg-primary/[0.03]">
+                <article
+                  id={entry.id}
+                  class="bg-background sm:hover:border-primary/30 sm:hover:bg-primary/[0.03] ml-6 scroll-mt-24 border transition-all duration-300 sm:ml-10"
+                >
                   <div class="grid gap-0 lg:grid-cols-[9rem_minmax(0,1fr)]">
                     <div class="border-b px-4 py-4 lg:border-r lg:border-b-0 lg:px-5">
-                      <p class="text-muted-foreground text-[10px] uppercase tracking-[0.24em]">
+                      <p class="text-muted-foreground text-[10px] tracking-[0.24em] uppercase">
                         {entry.type}
                       </p>
                       <p class="mt-2 text-lg">{entry.period}</p>
@@ -130,26 +194,24 @@ const entries = [
                     <div class="p-4 lg:p-5">
                       <div class="flex flex-col gap-4">
                         <div class="flex items-start gap-4">
-                          {
-                            entry.logo ? (
-                              <div class="border bg-muted/20 flex size-12 shrink-0 items-center justify-center overflow-hidden p-1 transition-all duration-300 sm:group-hover/timeline:border-primary/30 sm:group-hover/timeline:bg-primary/10">
-                                <img
-                                  src={entry.logo}
-                                  alt={`${entry.organization} logo`}
-                                  class="max-h-full max-w-full object-contain"
-                                />
-                              </div>
-                            ) : (
-                              <div class="border bg-muted/20 flex size-12 shrink-0 items-center justify-center text-sm font-semibold transition-all duration-300 sm:group-hover/timeline:border-primary/30 sm:group-hover/timeline:bg-primary/10 sm:group-hover/timeline:text-primary">
-                                {entry.monogram}
-                              </div>
-                            )
-                          }
+                          {entry.logo ? (
+                            <div class="bg-muted/20 sm:group-hover/timeline:border-primary/30 sm:group-hover/timeline:bg-primary/10 flex size-12 shrink-0 items-center justify-center overflow-hidden border p-1 transition-all duration-300">
+                              <img
+                                src={entry.logo}
+                                alt={`${entry.organization} logo`}
+                                class="max-h-full max-w-full object-contain"
+                              />
+                            </div>
+                          ) : (
+                            <div class="bg-muted/20 sm:group-hover/timeline:border-primary/30 sm:group-hover/timeline:bg-primary/10 sm:group-hover/timeline:text-primary flex size-12 shrink-0 items-center justify-center border text-sm font-semibold transition-all duration-300">
+                              {entry.monogram}
+                            </div>
+                          )}
 
                           <div class="min-w-0 flex-1">
                             <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                               <div>
-                                <h3 class="text-lg font-medium transition-colors duration-300 sm:group-hover/timeline:text-primary">
+                                <h3 class="sm:group-hover/timeline:text-primary text-lg font-medium transition-colors duration-300">
                                   {entry.title}
                                 </h3>
                                 <p class="text-foreground/78 mt-1 text-sm">
@@ -163,49 +225,47 @@ const entries = [
                                   {entry.location}
                                 </span>
                                 <span class="flex items-center gap-1.5">
-                                  <Icon name="lucide:calendar-range" class="size-3" />
+                                  <Icon
+                                    name="lucide:calendar-range"
+                                    class="size-3"
+                                  />
                                   {entry.dateRange}
                                 </span>
                               </div>
                             </div>
 
-                            <p class="text-foreground/72 mt-4 text-sm leading-8 transition-colors duration-300 sm:group-hover/timeline:text-foreground/90">
-                              {
-                                entry.organization === 'The Collective' ? (
-                                  <>
-                                    Co-Founded The Collective, a Venture Studio
-                                    that accelerates student startup founders
-                                    growth and brings corporate deals to them.
-                                    Checkout our website{' '}
-                                    <a
-                                      href="https://www.thecollectivefounders.com/"
-                                      target="_blank"
-                                      rel="noreferrer noopener"
-                                      class="text-foreground underline decoration-muted-foreground underline-offset-[3px] transition-colors hover:text-primary hover:decoration-primary"
-                                    >
-                                      here
-                                    </a>
-                                    !
-                                  </>
-                                ) : (
-                                  entry.summary
-                                )
-                              }
+                            <p class="text-foreground/72 sm:group-hover/timeline:text-foreground/90 mt-4 text-sm leading-8 transition-colors duration-300">
+                              {entry.organization === 'The Collective' ? (
+                                <>
+                                  Co-founded The Collective, a venture studio
+                                  that helps student founders grow their
+                                  startups, build peer networks, and access
+                                  corporate opportunities. Visit the{' '}
+                                  <a
+                                    href="https://www.thecollectivefounders.com/"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    class="text-foreground decoration-muted-foreground hover:text-primary hover:decoration-primary underline underline-offset-[3px] transition-colors"
+                                  >
+                                    community website.
+                                  </a>
+                                </>
+                              ) : (
+                                entry.summary
+                              )}
                             </p>
 
-                            {
-                              entry.highlights.length > 0 && (
-                                <div class="mt-4 overflow-hidden transition-all duration-300 sm:max-h-0 sm:opacity-0 sm:group-hover/timeline:max-h-96 sm:group-hover/timeline:opacity-100">
-                                  <div class="flex flex-wrap gap-2 border-t pt-4">
-                                    {entry.highlights.map((highlight) => (
-                                      <span class="border bg-background px-2.5 py-1 text-[11px] leading-5 text-muted-foreground transition-all duration-300 sm:group-hover/timeline:border-primary/25 sm:group-hover/timeline:bg-primary/10 sm:group-hover/timeline:text-primary">
-                                        {highlight}
-                                      </span>
-                                    ))}
-                                  </div>
+                            {entry.highlights.length > 0 && (
+                              <div class="mt-4 overflow-hidden transition-all duration-300 sm:max-h-0 sm:opacity-0 sm:group-hover/timeline:max-h-[32rem] sm:group-hover/timeline:opacity-100">
+                                <div class="flex flex-wrap gap-2 border-t pt-4">
+                                  {entry.highlights.map((highlight) => (
+                                    <span class="bg-background text-muted-foreground sm:group-hover/timeline:border-primary/25 sm:group-hover/timeline:bg-primary/10 sm:group-hover/timeline:text-primary border px-2.5 py-1 text-[11px] leading-5 transition-all duration-300">
+                                      {highlight}
+                                    </span>
+                                  ))}
                                 </div>
-                              )
-                            }
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>

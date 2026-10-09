@@ -1,8 +1,9 @@
 ---
 name: 'KayPohDev'
-description: 'KayPohDev is an AI-powered tool that recreates entire startup demos from just a short video by extracting key elements and generating a functional UI prototype.'
-tags: ['ai', 'prototype', 'startup-tools']
-image: '/static/projects/kaypohdev.png'
-link: 'https://devpost.com/software/kaypohdev'
-order: 5
+description: 'Turns a startup demo video into a working product clone by extracting its flows, reconstructing the interface, and wiring the result to callable MCP tools.'
+tags: ['ai-agents', 'mcp', 'product-reconstruction']
+image: '/static/projects/kaypohdev.jpg'
+link: 'https://kaypohdev.vercel.app/'
+demoVideo: 'https://www.youtube.com/watch?v=ikwUwA27QVc'
+order: 9
 ---

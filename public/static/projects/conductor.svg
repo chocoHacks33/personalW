@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Conductor emergency dispatch project cover</title>
+  <desc id="desc">A venue map routes an emergency responder and backfills the responder's original post.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#120b18"/>
+      <stop offset="0.55" stop-color="#24132d"/>
+      <stop offset="1" stop-color="#381d34"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b9a7ff"/>
+      <stop offset="1" stop-color="#ff9277"/>
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#f3d7ff" opacity="0.08"/>
+    </pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#dots)"/>
+  <circle cx="1090" cy="100" r="250" fill="#ff9277" opacity="0.055"/>
+  <circle cx="80" cy="710" r="270" fill="#8c7cff" opacity="0.07"/>
+
+  <g transform="translate(78 67)" font-family="Arial, sans-serif">
+    <rect width="1044" height="616" rx="30" fill="#100a18" fill-opacity="0.58" stroke="#d8c7ff" stroke-opacity="0.18"/>
+    <text x="44" y="61" fill="#f9efff" font-size="26" font-weight="700" letter-spacing="5">CONDUCTOR</text>
+    <text x="44" y="94" fill="#b7a5bd" font-size="18">Voice-first emergency dispatch for crowded venues</text>
+
+    <g transform="translate(44 132)">
+      <rect width="665" height="430" rx="22" fill="#0d0913" stroke="#dac7ff" stroke-opacity="0.2"/>
+      <path d="M76 52h181v91h124V67h188v113h59M0 245h126v-66h115v91h134v-64h115v98h175M104 430V327h103v-57M421 430V304h102" fill="none" stroke="#d4c3e8" stroke-opacity="0.22" stroke-width="15"/>
+
+      <g fill="#b9a7ff" fill-opacity="0.2" stroke="#c8baff" stroke-width="2">
+        <circle cx="88" cy="371" r="13"/><circle cx="202" cy="213" r="13"/><circle cx="320" cy="116" r="13"/><circle cx="444" cy="246" r="13"/><circle cx="575" cy="96" r="13"/><circle cx="579" cy="350" r="13"/>
+      </g>
+
+      <path d="M88 371C146 331 154 250 202 213c42-33 74-65 118-97 62 27 77 82 124 130 52-29 76-106 131-150" fill="none" stroke="url(#route)" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 12"/>
+      <path d="M579 350c-54-2-88-31-135-104" fill="none" stroke="#ff9277" stroke-opacity="0.62" stroke-width="4" stroke-dasharray="9 10"/>
+
+      <g transform="translate(575 96)" filter="url(#glow)">
+        <circle r="23" fill="#ff9277"/>
+        <path d="M0-12v15M0 11v2" stroke="#2b1012" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <text x="535" y="55" fill="#ffb6a3" font-size="14" font-weight="700" letter-spacing="2">INCIDENT</text>
+
+      <g transform="translate(88 371)">
+        <circle r="23" fill="#b9a7ff"/>
+        <path d="M-8-2a8 8 0 1 1 16 0M-14 15c2-12 26-12 28 0" fill="none" stroke="#21162d" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <text x="36" y="415" fill="#cfc4f2" font-size="14" font-weight="700" letter-spacing="2">RESPONDER</text>
+
+      <g transform="translate(579 350)">
+        <circle r="18" fill="#ff9277" fill-opacity="0.18" stroke="#ff9277" stroke-width="2"/>
+        <path d="m-7 0 5 5 10-12" fill="none" stroke="#ffb7a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="512" y="390" fill="#c4928f" font-size="13" letter-spacing="2">BACKFILL POST</text>
+    </g>
+
+    <g transform="translate(739 132)">
+      <rect width="261" height="128" rx="20" fill="#1c1024" stroke="#b9a7ff" stroke-opacity="0.34"/>
+      <text x="24" y="35" fill="#a998ae" font-size="13" letter-spacing="2">VOICE INTAKE</text>
+      <path d="M26 80h10l8-27 13 53 14-39 10 21 12-33 11 25h22l10-17 14 35 13-25 12 7h36" fill="none" stroke="#c7b6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <rect y="148" width="261" height="128" rx="20" fill="#1c1024" stroke="#b9a7ff" stroke-opacity="0.34"/>
+      <text x="24" y="183" fill="#a998ae" font-size="13" letter-spacing="2">DISPATCH ENGINE</text>
+      <text x="24" y="225" fill="#f3eaff" font-size="23" font-weight="700">INCIDENT → SKILLS</text>
+      <text x="24" y="252" fill="#bdadca" font-size="15">Zone · urgency · coverage</text>
+
+      <rect y="296" width="261" height="134" rx="20" fill="#ff9277" fill-opacity="0.09" stroke="#ff9277" stroke-opacity="0.48"/>
+      <text x="24" y="334" fill="#ffb7a5" font-size="13" letter-spacing="2">RAISE SUMMIT · PARIS</text>
+      <text x="24" y="378" fill="#fff0eb" font-size="25" font-weight="700">RUNNER-UP</text>
+      <text x="24" y="406" fill="#c69a94" font-size="15">Crusoe Track</text>
+    </g>
+  </g>
+</svg>
