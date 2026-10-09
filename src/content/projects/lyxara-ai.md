@@ -5,5 +5,5 @@ tags: ['voice-ai', 'healthcare', 'knowledge-graph']
 image: '/static/projects/lyxara.png'
 link: 'https://www.youtube.com/watch?v=gMozWBD9LTM'
 demoVideo: 'https://www.youtube.com/watch?v=gMozWBD9LTM'
-order: 11
+order: 10
 ---

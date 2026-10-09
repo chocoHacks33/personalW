@@ -5,5 +5,5 @@ tags: ['ai', 'debate', 'gamified']
 image: '/static/projects/debateio.png'
 link: 'https://devpost.com/software/debate-io'
 demoVideo: 'https://www.youtube.com/watch?v=P6MDtNW48jw'
-order: 16
+order: 15
 ---

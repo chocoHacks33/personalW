@@ -4,5 +4,5 @@ description: 'A multi-function rescue robot with custom environment mapping, fal
 tags: ['robotics', 'computer-vision', 'edge-ai']
 image: '/static/projects/brainhack-rescue.svg'
 link: 'https://tprakashkumar.netlify.app/static/resume/Prakash.pdf'
-order: 8
+order: 7
 ---

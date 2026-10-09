@@ -5,5 +5,5 @@ tags: ['voice-ai', 'board-games', 'rules']
 image: '/static/projects/gamesage.png'
 link: 'https://www.youtube.com/watch?v=ZLo7fLushQA'
 demoVideo: 'https://www.youtube.com/watch?v=ZLo7fLushQA'
-order: 12
+order: 11
 ---

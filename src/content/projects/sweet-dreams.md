@@ -5,5 +5,5 @@ tags: ['computer-vision', 'sleep', 'ai']
 image: '/static/projects/sweetdreams.png'
 link: 'https://www.youtube.com/watch?v=dtzTf-IntPo'
 demoVideo: 'https://www.youtube.com/watch?v=dtzTf-IntPo'
-order: 13
+order: 12
 ---

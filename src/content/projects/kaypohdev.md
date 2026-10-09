@@ -5,5 +5,5 @@ tags: ['ai-agents', 'mcp', 'product-reconstruction']
 image: '/static/projects/kaypohdev.jpg'
 link: 'https://kaypohdev.vercel.app/'
 demoVideo: 'https://www.youtube.com/watch?v=ikwUwA27QVc'
-order: 9
+order: 8
 ---

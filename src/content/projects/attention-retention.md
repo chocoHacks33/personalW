@@ -5,5 +5,5 @@ tags: ['ai', 'education', 'chatbot']
 image: '/static/projects/attentionretention.png'
 link: 'https://devpost.com/software/attention-retention'
 demoVideo: 'https://www.youtube.com/watch?v=LlFUs6YcmXQ'
-order: 15
+order: 14
 ---
