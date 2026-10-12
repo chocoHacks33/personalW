@@ -25,72 +25,36 @@ const postsByYear = groupPostsByYear(page.data)
 const years = Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a))
 ---
 
-<Layout>
-  <PageHead
-    slot="head"
-    title="Blog"
-    description="Field notes from Prakash Kumar on building, travel, product engineering, and the lessons that survive shipping."
+<Layout class="max-w-3xl">
+  <PageHead slot="head" title="Blog" />
+  <Breadcrumbs
+    items={[
+      { label: 'Blog', href: '/blog', icon: 'lucide:library-big' },
+      { label: `Page ${page.currentPage}`, icon: 'lucide:book-copy' },
+    ]}
   />
 
-  <div class="mx-auto w-full max-w-6xl">
-    <Breadcrumbs
-      items={[
-        { label: 'Blog', href: '/blog', icon: 'lucide:library-big' },
-        { label: `Page ${page.currentPage}`, icon: 'lucide:book-copy' },
-      ]}
-    />
-
-    <section
-      class="page-hero mt-6 px-5 py-8 sm:px-8 sm:py-10 lg:px-11 lg:py-12"
-    >
-      <div class="relative z-10 max-w-3xl">
-        <p class="eyebrow">Notes from the field</p>
-        <h1
-          class="mt-4 text-3xl leading-tight font-semibold tracking-[-0.045em] sm:text-5xl"
-        >
-          The thinking behind the things I build.
-        </h1>
-        <p
-          class="text-muted-foreground mt-5 max-w-2xl text-sm leading-7 sm:text-base sm:leading-8"
-        >
-          Long-form reflections on products, technical rabbit holes, travel, and
-          the lessons that only become obvious after shipping.
-        </p>
-      </div>
-    </section>
-
-    <div
-      class="mt-12 flex min-h-[calc(100vh-18rem)] flex-col gap-y-12 sm:mt-16"
-    >
-      {
-        years.map((year) => (
-          <section class="flex flex-col gap-y-5">
-            <div class="flex items-center gap-4">
-              <span class="eyebrow">Archive</span>
-              <span class="text-xl font-semibold tracking-[-0.03em]">
-                {year}
-              </span>
-              <span class="h-px flex-1 bg-white/[0.08]" />
-            </div>
-            <ul class="flex flex-col gap-5">
-              {postsByYear[year].map((post) => (
-                <li>
-                  <BlogCard entry={post} />
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))
-      }
-    </div>
-
-    <div class="mt-10">
-      <PaginationComponent
-        currentPage={page.currentPage}
-        totalPages={page.lastPage}
-        baseUrl="/blog/"
-        client:load
-      />
-    </div>
+  <div class="flex min-h-[calc(100vh-18rem)] flex-col gap-y-8">
+    {
+      years.map((year) => (
+        <section class="flex flex-col gap-y-4">
+          <div class="font-medium">{year}</div>
+          <ul class="flex flex-col gap-4">
+            {postsByYear[year].map((post) => (
+              <li>
+                <BlogCard entry={post} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
   </div>
+
+  <PaginationComponent
+    currentPage={page.currentPage}
+    totalPages={page.lastPage}
+    baseUrl="/blog/"
+    client:load
+  />
 </Layout>

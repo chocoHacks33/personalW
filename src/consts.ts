@@ -1,12 +1,12 @@
 import type { IconMap, SocialLink, Site } from '@/types'
 
 export const SITE: Site = {
-  title: 'Prakash Kumar',
+  title: 'enscribe.dev',
   description:
-    'Prakash Kumar is a product engineer and founder in Singapore, building useful AI systems, developer tools, and startups.',
-  href: 'https://tprakashkumar.netlify.app',
-  author: 'Prakash Kumar',
-  locale: 'en-SG',
+    'Design engineer and cybersecurity enthusiast based in Los Angeles.',
+  href: 'https://enscribe.dev',
+  author: 'enscribe',
+  locale: 'en-US',
   featuredPostCount: 2,
   postsPerPage: 4,
 }
