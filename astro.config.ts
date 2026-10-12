@@ -16,10 +16,10 @@ import rehypeDocument from 'rehype-document'
 
 import tailwindcss from '@tailwindcss/vite'
 
-import svelte from '@astrojs/svelte';
+import svelte from '@astrojs/svelte'
 
 export default defineConfig({
-  site: 'https://enscribe.dev',
+  site: 'https://tprakashkumar.netlify.app',
   integrations: [expressiveCode(), mdx(), react(), sitemap(), icon(), svelte()],
   vite: {
     plugins: [tailwindcss()],

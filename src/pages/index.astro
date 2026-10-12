@@ -27,7 +27,7 @@ const photoSlides = [
   <PageHead slot="head" title="Home" />
   <section
     class={cn(
-      'mx-auto grid min-w-xs sm:has-[[data-trigger]:hover]:*:first:[&_[data-overlay]]:opacity-0',
+      'home-bento mx-auto grid min-w-xs sm:has-[[data-trigger]:hover]:*:first:[&_[data-overlay]]:opacity-0',
       'max-w-sm grid-cols-1 [grid-template-areas:"a""b""e""d""j""i""k""l"]',
       'sm:max-w-2xl sm:grid-cols-2 sm:[grid-template-areas:"a_a""b_d""e_e""j_i""h_c""h_l""k_l"]',
       'lg:max-w-5xl lg:grid-cols-3 lg:[grid-template-areas:"a_a_b""d_e_e""h_j_i""h_c_k""h_l_l"]',
@@ -49,12 +49,18 @@ const photoSlides = [
                 <p
                   class="text-foreground/80 bg-background block border p-3 text-sm text-pretty"
                 >
-                  Hey, I&rsquo;m Prakash! I&rsquo;m a Computer Science student at NUS, builder, and product engineer based in Singapore. I like building fast, stress-testing ideas in the real world, and shipping systems that actually get used.
+                  Hey, I&rsquo;m Prakash! I&rsquo;m a Computer Science student
+                  at NUS, builder, and product engineer based in Singapore. I
+                  like building fast, stress-testing ideas in the real world,
+                  and shipping systems that actually get used.
                 </p>
                 <p
                   class="text-foreground/80 bg-background block border p-3 text-sm text-pretty"
                 >
-                  I co-founded The Collective, a venture builder and a community connecting ambitious builders across universities. I work closely with early-stage founders and through it shape my own ventures, including adMorph.ai. You can read more about me <Link
+                  I co-founded The Collective, a venture builder and a community
+                  connecting ambitious builders across universities. I work
+                  closely with early-stage founders and through it shape my own
+                  ventures, including adMorph.ai. You can read more about me <Link
                     href="/about"
                     class="text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors"
                     >here</Link
@@ -74,7 +80,9 @@ const photoSlides = [
           <div
             class="relative size-full bg-[url('/static/bento/details-foreground.png')] bg-cover bg-center bg-no-repeat transition-opacity duration-200 sm:opacity-0 sm:hover:opacity-100"
           >
-            <div class="absolute inset-0 flex flex-col justify-center gap-3 px-4 py-5">
+            <div
+              class="absolute inset-0 flex flex-col justify-center gap-3 px-4 py-5"
+            >
               <p
                 class="text-foreground/80 bg-background mr-14 border p-3 text-xs text-pretty"
               >
@@ -91,8 +99,7 @@ const photoSlides = [
                   href="/projects"
                   class="text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors"
                   >here</Link
-                > to find out more about the projects I have done across
-                hackathons!
+                > to find out more about the projects I have done across hackathons!
               </p>
             </div>
           </div>
@@ -118,11 +125,18 @@ const photoSlides = [
         >
           <div
             data-photo-frame
-            class="size-full bg-cover bg-center bg-no-repeat grayscale sepia-[0.65] contrast-[0.95] brightness-[0.78] saturate-[0.7] transition-[background-image,transform,filter] duration-300"
+            class="size-full bg-cover bg-center bg-no-repeat brightness-[0.78] contrast-[0.95] grayscale saturate-[0.7] sepia-[0.65] transition-[background-image,transform,filter] duration-300"
             style={`background-image: url('${photoSlides[0] ?? '/static/bento/avatar.jpg'}')`}
-          ></div>
-          <div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/25 to-transparent"></div>
-          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-background/45 to-transparent"></div>
+          >
+          </div>
+          <div
+            class="from-background/25 pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b to-transparent"
+          >
+          </div>
+          <div
+            class="from-background/45 pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t to-transparent"
+          >
+          </div>
           <button
             type="button"
             data-photo-next
@@ -246,8 +260,8 @@ const photoSlides = [
             aria-hidden="true"
           />
           <Link
-            href={SOCIAL_LINKS.find((link) => link.label === 'LinkedIn')?.href ||
-              '#'}
+            href={SOCIAL_LINKS.find((link) => link.label === 'LinkedIn')
+              ?.href || '#'}
             title="Visit my LinkedIn profile"
             aria-label="Visit my LinkedIn profile"
             external
@@ -263,16 +277,24 @@ const photoSlides = [
       </div>
     </div>
     <div class="p-2 [grid-area:l]">
-      <div class="border bg-muted/20 relative overflow-hidden">
-        <div class="group/resume relative flex aspect-[4/1] min-h-36 w-full items-center justify-between gap-6 overflow-hidden px-6 py-5">
+      <div class="bg-muted/20 relative overflow-hidden border">
+        <div
+          class="group/resume relative flex aspect-[4/1] min-h-36 w-full items-center justify-between gap-6 overflow-hidden px-6 py-5"
+        >
           <div
             class="absolute inset-0 bg-[url('/static/bento/image-2.png')] bg-cover bg-center bg-no-repeat opacity-20"
             aria-hidden="true"
-          ></div>
-          <div class="absolute inset-0 bg-gradient-to-r from-background via-background/94 to-background/80"></div>
+          >
+          </div>
+          <div
+            class="from-background via-background/94 to-background/80 absolute inset-0 bg-gradient-to-r"
+          >
+          </div>
 
           <div class="relative z-10 max-w-xl">
-            <p class="text-muted-foreground text-[11px] uppercase tracking-[0.28em]">
+            <p
+              class="text-muted-foreground text-[11px] tracking-[0.28em] uppercase"
+            >
               Resume
             </p>
             <h3 class="mt-2 text-xl font-medium">Download my resume</h3>
