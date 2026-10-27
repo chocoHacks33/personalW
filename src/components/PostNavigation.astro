@@ -9,6 +9,7 @@ const isSubpost = !!parentPost
 ---
 
 <nav
+  aria-label={isSubpost ? 'Post navigation' : 'Blog post navigation'}
   class={cn(
     'col-start-2 grid grid-cols-1 gap-4',
     isSubpost ? 'sm:grid-cols-3' : 'sm:grid-cols-2',
@@ -22,6 +23,12 @@ const isSubpost = !!parentPost
       !olderPost && 'pointer-events-none opacity-50 cursor-not-allowed',
     )}
     aria-disabled={!olderPost}
+    aria-label={
+      olderPost
+        ? `${isSubpost ? 'Previous subpost' : 'Previous post'}: ${olderPost.data.title}`
+        : `No ${isSubpost ? 'older subpost' : 'older post'} available`
+    }
+    tabindex={!olderPost ? -1 : undefined}
   >
     <Icon
       name="lucide:arrow-left"
@@ -49,6 +56,9 @@ const isSubpost = !!parentPost
           'group flex size-full items-center justify-center',
           !parentPost && 'pointer-events-none cursor-not-allowed opacity-50',
         )}
+        aria-label={parentPost ? `Parent post: ${parentPost.data.title}` : 'No parent post available'}
+        aria-disabled={!parentPost}
+        tabindex={!parentPost ? -1 : undefined}
       >
         <Icon
           name="lucide:corner-left-up"
@@ -74,6 +84,12 @@ const isSubpost = !!parentPost
       !newerPost && 'pointer-events-none opacity-50 cursor-not-allowed',
     )}
     aria-disabled={!newerPost}
+    aria-label={
+      newerPost
+        ? `${isSubpost ? 'Next subpost' : 'Next post'}: ${newerPost.data.title}`
+        : `No ${isSubpost ? 'newer subpost' : 'newer post'} available`
+    }
+    tabindex={!newerPost ? -1 : undefined}
   >
     <div class="flex flex-col items-end overflow-hidden text-wrap">
       <span class="text-muted-foreground text-right text-xs">
